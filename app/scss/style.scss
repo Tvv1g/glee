@@ -59,7 +59,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-7px, -7px);
+    transform: translate(-50%, -50%);
   }
 
   &__wrapper {
@@ -77,8 +77,12 @@
     position: relative;
   }
 
-  &__link:not(:last-child) {
-    margin-right: 58px;
+  &__line {
+    display: block;
+    width: 1px;
+    height: 32px;
+    margin: 0 29px;
+    background-color: #fde7d3;
   }
 
   &__num {
