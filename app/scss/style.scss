@@ -1,10 +1,100 @@
-@import 'reset';
-@import 'vars';
-@import 'fonts';
-@import 'global';
+@import "reset";
+@import "vars";
+@import "fonts";
+@import "global";
 
+.header {
+  padding: 52px 0;
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
+.logo {
+  padding-left: 65px;
+  background: url("../images/logo.svg") no-repeat left center;
+  @extend %rubik-500;
+  font-size: 36px;
+  line-height: 58px;
+  color: $default;
+}
 
+.menu {
+  &__list {
+    display: flex;
+  }
 
-@import 'media';
+  &__list-item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__list-link {
+    color: $default;
+    transition: all 0.3s;
+    @extend %rubik-500;
+    font-size: 15px;
+    &:hover {
+      color: #fcd7b6;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+
+  &__link-search {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #edf1f4;
+    margin-right: 20px;
+  }
+
+  &__img-search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-7px, -7px);
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 68px;
+    width: 178px;
+    height: 50px;
+    border-radius: 30px 30px;
+    background-color: #fcd7b6;
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 58px;
+  }
+
+  &__num {
+    position: absolute;
+    @extend %dmsans-400;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    font-size: 10px;
+    line-height: 17px;
+    top: -9px;
+    right: -8px;
+    color: $title;
+  }
+}
+
+@import "media";
